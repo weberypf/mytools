@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using mytools.Web.Ext;
 namespace mytools.Web.Controllers
 {
     public class HomeController : Controller
     {
-        //
-        // GET: /Home/
-
         public ActionResult Index()
         {
             return View();
         }
 
+        public ActionResult Test()
+        {
+            return Content(Email.Mail("53294245@qq.com", "测试", "TEST").ToString());
+        }
     }
 }
